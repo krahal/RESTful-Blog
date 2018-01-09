@@ -1,0 +1,24 @@
+i.icon {
+  font-size: 1.5em;
+}
+
+.container.main {
+  margin-top: 7.0em;
+}
+
+#delete {
+  display: inline;
+}
+
+.ui.huge.header{
+  min-height: 1em;
+  font-size: 2.25em; 
+}
+
+#showHeader {
+  margin-top: 6px;
+}
+
+.ui.segment:last-child {
+    margin-bottom: 4.0em;
+}
