@@ -5,9 +5,11 @@ var express           = require("express"),
     methodOverride    = require("method-override"),
     expressSanitizer  = require("express-sanitizer");
 
+var url = process.env.DATABASEURL || "mongodb://localhost/restful-blog";
 // APP CONFIG
-mongoose.connect("mongodb://localhost/restful-blog", {useMongoClient: true}); // connect mongoose
-mongoose.Promise = global.Promise;
+mongoose.connect(url, {useMongoClient: true}); // connect mongoose
+mongoose.Promise = global.Promise; 
+
 app.set("view engine", "ejs");  // set up ejs
 app.use(express.static("public"));  // allow our own stylesheets
 app.use(bodyParser.urlencoded({extended: true})); // set up body-parser
